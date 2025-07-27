@@ -11,7 +11,8 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - /docker/qbittorrent/appdata:/config
-      - /mnt/storage_sata/media/z_to_sort:/z_to_sort 
+      - /mnt/storage_sata/media/z_to_sort:/z_to_sort
+      - /mnt/storage_sata/media/z_incomplete:/z_incomplete
       - /mnt/storage_sata/media/movies:/movies
       - /mnt/storage_sata/media/tv_v1:/tv_v1
       - /mnt/storage_sata/media/music:/music
