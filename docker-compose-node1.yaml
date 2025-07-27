@@ -16,6 +16,7 @@ services:
       - /mnt/storage_sata/media/movies:/movies
       - /mnt/storage_sata/media/tv_v1:/tv_v1
       - /mnt/storage_sata/media/music:/music
+      - /mnt/storage_sata/downloads:/downloads
     ports:
       - 8080:8080
       - 6881:6881
