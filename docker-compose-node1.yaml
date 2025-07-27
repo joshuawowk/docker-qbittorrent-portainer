@@ -1,3 +1,4 @@
+---
 services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
@@ -6,13 +7,16 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/New_York
-      - WEBUI_PORT=8118
+      - WEBUI_PORT=8080
       - TORRENTING_PORT=6881
     volumes:
-      - /path/to/appdata/config:/config
-      - /path/to/downloads:/downloads
+      - /docker/qbittorrent/appdata:/config
+      - /mnt/storage_sata/media/z_to_sort:/z_to_sort 
+      - /mnt/storage_sata/media/movies:/movies
+      - /mnt/storage_sata/media/tv_v1:/tv_v1
+      - /mnt/storage_sata/media/music:/music
     ports:
-      - 8118:8118
+      - 8080:8080
       - 6881:6881
       - 6881:6881/udp
     restart: unless-stopped
